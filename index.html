@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra | Papel | Tijera</title>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="container">
+      <div class="banner">
+      </div>
+      <div class="jugadas-container flex-container">
+        <figure class="jugador flex-1">
+          <figcaption>Jugador</figcaption>
+          <img id="imgJugador" src="imagenes/back.png" alt="Espalda de una carta">
+        </figure>
+        <figure class="vs flex-1">
+          <img id="imgVS" src="imagenes/vs.png" alt="imagen versus">
+        </figure>
+        <figure class="cpu flex-1">
+          <figcaption>CPU</figcaption>
+          <img id="imgCPU" src="imagenes/back.png" alt="Espalda de una carta">
+        </figure>
+      </div>
+      <div class="opciones flex-container">
+        <div class="jugadas flex-container flex-2">
+          <div class="img-jugada flex-1">
+            <img src="imagenes/piedra.png" alt="piedra" onclick="tirada(this,'piedra')">
+          </div>
+          <div class="img-jugda flex-1">
+            <img src="imagenes/papel.png" alt="papel" onclick="tirada(this,'papel')">
+          </div>
+          <div class="img-jugada flex-1">
+            <img src="imagenes/tijera.png" alt="tijera" onclick="tirada(this,'tijera')">
+          </div>
+        </div>
+        <div class="score flex-4">
+          <output id="outResultado"></output>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
