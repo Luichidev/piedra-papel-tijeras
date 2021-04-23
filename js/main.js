@@ -6,20 +6,19 @@ var empates = 0,
 
 // funcion tirada del usuario
 
-function tirada(imagen, jugada) {
-  jugada = jugada.toUpperCase(); // para evitar errores convertimos a mayúsculas
-
+function tirada(tiradaJugador) {
   // Determinar la tirada del CPU
-  let cpu = tiradaCPU();
+  var tiradaCPU = Math.floor(Math.random() * 3);
+  var tiradas = ["piedra", "papel", "tijera"];
+  tiradaCPU = tiradas[tiradaCPU];
 
-  imgJugador.src = imagen.src;
-  imgJugador.alt = imagen.alt;
-
-  imgCPU.src = cpu.img;
-  imgCPU.alt = cpu.jugada;
+  // actualizar GUI
+  imgJugador.src = "imagenes/" + tiradaJugador + ".png";
+  imgCPU.src = "imagenes/" + tiradaCPU + ".png";
 
   //¿hay empate?
   // si
+
   // gana='nadie', empates++
   //sino
   // ¿Gana jugador?
@@ -29,25 +28,8 @@ function tirada(imagen, jugada) {
   // gana='CPU', derrotas++
   //partidas++
   //actuliazar la interfaz gráfica
-
-  return (outResultado.innerHTML = `
-    <div class="opciones flex-container">
-      yo: ${jugada}
-      CPU: ${cpu.jugada}
-    </div>
-  `);
-}
-
-function tiradaCPU() {
-  let cpuJugada = ["piedra", "papel", "tijera"];
-  let tipoJugada = cpuJugada[random()].toUpperCase();
-  let imgJugada = `imagenes/${tipoJugada}.png`;
-  return (cpu = {
-    jugada: tipoJugada,
-    img: imgJugada,
-  });
-}
-
-function random() {
-  return Math.floor(Math.random() * 3);
+  outEmpates.innerHTML = partidas;
+  outVictoria.innerHTML = partidas;
+  outPerdidas.innerHTML = partidas;
+  outPartidas.innerHTML = partidas;
 }

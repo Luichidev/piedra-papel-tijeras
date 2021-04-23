@@ -11,41 +11,58 @@
 </head>
 
 <body>
-  <main>
-    <section class="container">
-      <div class="banner">
-      </div>
+  <header>
+    <img class="logo" src="imagenes/logo.png" alt="Logo piedra, papel o tijera">
+    <h1><span class="piedra">Piedra </span><span class="papel"> Papel</span><span class="tijera"> Tijera</span></h1>
+  </header>
+  <main class="container">
+    <section>
       <div class="jugadas-container flex-container">
-        <figure class="jugador flex-1">
-          <figcaption>Jugador</figcaption>
-          <img id="imgJugador" src="imagenes/back.png" alt="Espalda de una carta">
+        <figure class="cpu flex-1">
+          <figcaption class="tijera">CPU</figcaption>
+          <img id="imgCPU" src="imagenes/back.png" alt="Espalda de una carta">
         </figure>
         <figure class="vs flex-1">
           <img id="imgVS" src="imagenes/vs.png" alt="imagen versus">
         </figure>
-        <figure class="cpu flex-1">
-          <figcaption>CPU</figcaption>
-          <img id="imgCPU" src="imagenes/back.png" alt="Espalda de una carta">
+        <figure class="jugador flex-1">
+          <figcaption class="tijera">Jugador</figcaption>
+          <img id="imgJugador" src="imagenes/back.png" alt="Espalda de una carta">
         </figure>
       </div>
       <div class="opciones flex-container">
-        <div class="jugadas flex-container flex-2">
+        <div class="score flex-2">
+          <p> Empates :
+            <output id="outEmpates"></output>
+          </p>
+          <p> Victorias :
+            <output id="outVictoria"></output>
+          </p>
+          <p> Perdidas :
+            <output id="outPerdidas"></output>
+          </p>
+          <p> Partidas :
+            <output id="outPartidas"></output>
+          </p>
+        </div>
+        <div class="jugadas flex-container flex-1">
           <div class="img-jugada flex-1">
-            <img src="imagenes/piedra.png" alt="piedra" onclick="tirada(this,'piedra')">
+            <img src="imagenes/piedra.png" alt="piedra" onclick="tirada('piedra')">
           </div>
           <div class="img-jugda flex-1">
-            <img src="imagenes/papel.png" alt="papel" onclick="tirada(this,'papel')">
+            <img src="imagenes/papel.png" alt="papel" onclick="tirada('papel')">
           </div>
           <div class="img-jugada flex-1">
-            <img src="imagenes/tijera.png" alt="tijera" onclick="tirada(this,'tijera')">
+            <img src="imagenes/tijera.png" alt="tijera" onclick="tirada('tijera')">
           </div>
-        </div>
-        <div class="score flex-4">
-          <output id="outResultado"></output>
         </div>
       </div>
     </section>
   </main>
+  <footer>
+    <p class="piedra">Autor: <a class="papel" href="https://twitter.com/@luichidev">@Luichidev</a> <span
+        class="tijera">2021</span></p>
+  </footer>
 </body>
 
 </html>
