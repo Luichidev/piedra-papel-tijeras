@@ -8,15 +8,20 @@
   <title>Piedra | Papel | Tijera</title>
   <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
+  <div id="ganadorFinal"><output id="outGanadorFinal"></output></div>
   <header>
     <img class="logo" src="imagenes/logo.png" alt="Logo piedra, papel o tijera">
     <h1><span class="piedra">Piedra </span><span class="papel"> Papel</span><span class="tijera"> Tijera</span></h1>
   </header>
   <main class="container">
     <section>
+      <div class="ganador">
+        <output class="piedra" id="outGanador">Empieza la partida</output>
+      </div>
       <div class="jugadas-container flex-container">
         <figure class="cpu flex-1">
           <figcaption class="tijera">CPU</figcaption>
@@ -31,30 +36,30 @@
         </figure>
       </div>
       <div class="opciones flex-container">
-        <div class="score flex-2">
+        <div class="score flex-1">
           <p> Empates :
-            <output id="outEmpates"></output>
+            <output id="outEmpates">0</output>
           </p>
           <p> Victorias :
-            <output id="outVictoria"></output>
+            <output id="outVictoria">0</output>
           </p>
           <p> Perdidas :
-            <output id="outPerdidas"></output>
+            <output id="outPerdidas">0</output>
           </p>
           <p> Partidas :
-            <output id="outPartidas"></output>
+            <output id="outPartidas">10</output>
           </p>
         </div>
         <div class="jugadas flex-container flex-1">
-          <div class="img-jugada flex-1">
+          <figure class="img-jugada flex-1">
             <img src="imagenes/piedra.png" alt="piedra" onclick="tirada('piedra')">
-          </div>
-          <div class="img-jugda flex-1">
+          </figure>
+          <figure class="img-jugada flex-1">
             <img src="imagenes/papel.png" alt="papel" onclick="tirada('papel')">
-          </div>
-          <div class="img-jugada flex-1">
+          </figure>
+          <figure class="img-jugada flex-1">
             <img src="imagenes/tijera.png" alt="tijera" onclick="tirada('tijera')">
-          </div>
+          </figure>
         </div>
       </div>
     </section>
