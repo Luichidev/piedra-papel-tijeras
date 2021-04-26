@@ -13,8 +13,8 @@ function tirada(tiradaJugador) {
 
   if (partidas > 0) {
     // actualizar GUI
-    imgJugador.src = "imagenes/" + tiradaJugador + ".png";
-    imgCPU.src = "imagenes/" + tiradaCPU + ".png";
+    imgJugadorFront.src = "imagenes/" + tiradaJugador + ".png";
+    imgCPUFront.src = "imagenes/" + tiradaCPU + ".png";
 
     //¿hay empate?
     // si
@@ -47,6 +47,13 @@ function tirada(tiradaJugador) {
 
     //actuliazar la interfaz gráfica
     actualizarScore();
+    cartaCPU.style.transform = "rotateY(180deg)";
+    cartaJugador.style.transform = "rotateY(180deg)";
+
+    setTimeout(function () {
+      cartaCPU.style.transform = "rotateY(0deg)";
+      cartaJugador.style.transform = "rotateY(0deg)";
+    }, 1000);
   } else {
     ganadorFinal.style.display = "block";
     if (victorias === perdidas) {
@@ -66,8 +73,6 @@ function tirada(tiradaJugador) {
       //actuliazar la interfaz gráfica
       actualizarScore();
       outGanador.innerHTML = "Empieza la partida";
-      imgJugador.src = "imagenes/back.png";
-      imgCPU.src = "imagenes/back.png";
     };
   }
 }

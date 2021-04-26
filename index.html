@@ -23,31 +23,47 @@
         <output class="piedra" id="outGanador">Empieza la partida</output>
       </div>
       <div class="jugadas-container flex-container">
-        <figure class="cpu flex-1">
-          <figcaption class="tijera">CPU</figcaption>
-          <img id="imgCPU" src="imagenes/back.png" alt="Espalda de una carta">
-        </figure>
+        <div class="flex-1">
+          <p class="tijera">CPU</p>
+          <div class="carta-box">
+            <div id="cartaCPU" class="carta">
+              <figure class="cara">
+                <img id="imgCPUBack" src="imagenes/back.png" alt="Espalda de una carta">
+              </figure>
+              <figure class="cara detras">
+                <img id="imgCPUFront" src="" alt="cara del juego piedra papel tijeras">
+              </figure>
+            </div>
+          </div>
+        </div>
         <figure class="vs flex-1">
           <img id="imgVS" src="imagenes/vs.png" alt="imagen versus">
         </figure>
-        <figure class="jugador flex-1">
-          <figcaption class="tijera">Jugador</figcaption>
-          <img id="imgJugador" src="imagenes/back.png" alt="Espalda de una carta">
-        </figure>
+        <div class="flex-1">
+          <p class="tijera">Jugador</p>
+          <div class="carta-box">
+            <div id="cartaJugador" class="carta">
+              <figure class="cara">
+                <img id="imgJugadorBack" src="imagenes/back.png" alt="Espalda de una carta">
+              </figure>
+              <figure class="cara detras">
+                <img id="imgJugadorFront" src="" alt="cara del juego piedra papel tijeras">
+              </figure>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="opciones flex-container">
         <div class="score flex-1">
-          <p> Empates :
+          <p> <span class="tijera">Empates :</span>
             <output id="outEmpates">0</output>
-          </p>
-          <p> Victorias :
+            <span class="tijera">Victorias :</span>
             <output id="outVictoria">0</output>
           </p>
-          <p> Perdidas :
+          <p> <span class="tijera">Perdidas :</span>
             <output id="outPerdidas">0</output>
-          </p>
-          <p> Partidas :
-            <output id="outPartidas">10</output>
+            <span class="tijera">Partidas :</span>
+            <output class="piedra" id="outPartidas">10</output>
           </p>
         </div>
         <div class="jugadas flex-container flex-1">
